@@ -85,7 +85,7 @@ odom0: zed/zed_node/odom
 # if unspecified, effectively making this parameter required for each sensor.
 odom0_config: [true,  true,  false,
                false, false, false,
-               true, false, false,
+               true, true, false,
                false, false, true,
                true, false, false]
 
@@ -127,7 +127,7 @@ odom0_twist_rejection_threshold: 1
 odom1: wheel_encoder/odom
 odom1_config: [true,  true,  false,
                false, false, true,
-               true, false, false, 
+               true, true, false, 
                false, false, true,
                false, false, false] 
 odom1_differential: false
