@@ -33,7 +33,7 @@ endif()
 
 
 # Geographiclib installs FindGeographicLib.cmake to this non-standard location
-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "/usr/share/cmake/geographiclib/")
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "/usr/share/cmake-3.10/Modules")
 find_package(GeographicLib REQUIRED)
 
 # Attempt to find Eigen using its own CMake module.
@@ -67,8 +67,7 @@ add_service_files(
     SetDatum.srv
     SetPose.srv
     SetUTMZone.srv
-    ToggleFilterProcessing.srv
-    FromLL.srv
+    ToggleFilterProcessing.srv    FromLL.srv
     ToLL.srv
 )
 
