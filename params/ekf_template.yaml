@@ -84,10 +84,10 @@ odom0: zed/zed_node/odom
 # has no pose information, so the first six values would be meaningless in that case. Each vector defaults to all false
 # if unspecified, effectively making this parameter required for each sensor.
 odom0_config: [true,  true,  false,
-               false, false, false,
-              true, true, false,
                false, false, true,
-               true, false, false]
+              true, true, false, #Ensure this is not duplicate data
+               false, false, false,
+               false, false, false]
 
 # If you have high-frequency data or are running with a low frequency parameter value, then you may want to increase
 # the size of the subscription queue so that more measurements are fused.
@@ -125,8 +125,8 @@ odom0_twist_rejection_threshold: 1
 
 # Further input parameter examples
 odom1: wheel_encoder/odom
-odom1_config: [true,  true,  false,
-               false, false, true,
+odom1_config: [false,  false,  false,
+               false, false, false,
                true, true, false, 
                false, false, true,
                false, false, false] 
